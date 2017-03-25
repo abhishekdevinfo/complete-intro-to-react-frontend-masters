@@ -1,7 +1,8 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { HashRouter, matchPath } from 'react-router-dom'
+import { HashRouter, Route } from 'react-router-dom'
 import Landing from './Landing'
+import Search from './Search'
 import '../public/normalize.css'
 import '../public/style.css'
 
@@ -10,7 +11,8 @@ const App = React.createClass({
     return (
       <HashRouter>
         <div className='app'>
-          <matchPath exactly pattern='/' component={Landing} />
+          <Route exact path='/' component={Landing} />
+          <Route path='/search' component={Search} />
         </div>
       </HashRouter>
     )

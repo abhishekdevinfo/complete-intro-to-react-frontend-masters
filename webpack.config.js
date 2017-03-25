@@ -9,13 +9,13 @@ module.exports = {
     filename: 'bundle.js'
   },
   devServer: {
-    publicPath: '/publicgit'
+    publicPath: '/public/'
   },
   resolve: {
     extensions: ['.js', '.json']
   },
   stats: {
-    color: true,
+    colors: true,
     reasons: true,
     chunks: true
   },
@@ -23,7 +23,7 @@ module.exports = {
     rules: [
       {
         enforce: 'pre',
-        test: /\.js/,
+        test: /\.js$/,
         loader: 'eslint-loader',
         exclude: /node_modules/
       },
