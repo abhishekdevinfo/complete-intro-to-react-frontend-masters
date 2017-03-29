@@ -1,7 +1,7 @@
 import React from 'react'
 import { render } from 'react-dom'
 import { BrowserRouter, Route } from 'react-router-dom'
-import { provider } from 'react-redux'
+import { Provider } from 'react-redux'
 import store from './store'
 import Landing from './Landing'
 import Search from './Search'
@@ -14,7 +14,7 @@ const App = React.createClass({
   render () {
     return (
       <BrowserRouter>
-        <provider store={store}>
+        <Provider store={store}>
           <div className='app'>
             <Route exact path='/' component={Landing} />
             <Route
@@ -29,7 +29,7 @@ const App = React.createClass({
               }}
             />
           </div>
-        </provider>
+        </Provider>
       </BrowserRouter>
     )
   }
