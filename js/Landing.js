@@ -31,3 +31,49 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps)(Landing)
+
+// ********************************************
+
+// // Another Way The map way
+
+// import React from 'react'
+// import { connect } from 'react-redux'
+// import { Link } from 'react-router-dom'
+// import { setSearchTerm } from './actionCreators'
+
+// const { string, func } = React.PropTypes
+
+// const Landing = React.createClass({
+//   propTypes: {
+//     searchTerm: string,
+//     dispatchSetSearchTerm: func
+//   },
+//   handleSearchTermChange (event) {
+//     this.props.dispatchSetSearchTerm(event.target.value)
+//   },
+//   render () {
+//     return (
+//       <div className='landing'>
+//         <h1>Video Store</h1>
+//         <input onChange={this.handleSearchTermChange} value={this.props.searchTerm} type='text' placeholder='Search' />
+//         <Link to='/search'>Browse All</Link>
+//       </div>
+//     )
+//   }
+// })
+
+// const mapStateToProps = (state) => {
+//   return {
+//     searchTerm: state.searchTerm
+//   }
+// }
+
+// const mapDispathToProps = (dispatch) => {
+//   return {
+//     dispatchSetSearchTerm (searchTerm) {
+//       dispatch(setSearchTerm(searchTerm))
+//     }
+//   }
+// }
+
+// export default connect(mapStateToProps, mapDispathToProps)(Landing)
