@@ -1,20 +1,20 @@
 {
   "name": "complete-intro-to-react",
   "version": "1.0.0",
-  "description": "React App",
+  "description": "A two day workshop on a complete intro to React",
   "main": "index.js",
-  "author": "Abhishek Baliyan <abhi.info.dev@gmail.com>",
+  "author": "Brian Holt <btholt@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "NODE_ENV=test jest",
-    "update-test": "npm run test -- -u",
+    "lint": "eslint js/**/*.js webpack.config.js",
     "build": "webpack",
     "dev": "webpack-dev-server",
-    "lint": "eslint js/**/*.js webpack.config.js",
-    "watch": "webpack --watch",
+    "watch": "npm run build -- --watch",
+    "test": "NODE_ENV=test jest",
+    "update-test": "npm run test -- -u",
     "cover": "npm run test -- --coverage"
   },
-"dependencies": {
+  "dependencies": {
     "axios": "^0.15.3",
     "express": "4.14.0",
     "history": "^4.4.0",
@@ -64,7 +64,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/abhishekdevinfo/complete-intro-to-react-frontend-masters"
+    "url": "git+https://github.com/btholt/complete-intro-to-react.git"
   },
   "keywords": [
     "react",
@@ -73,7 +73,7 @@
     "redux"
   ],
   "bugs": {
-    "url": "https://github.com/abhishekdevinfo/complete-intro-to-react-frontend-masters/issues"
+    "url": "https://github.com/btholt/complete-intro-to-react/issues"
   },
-  "homepage": "https://github.com/abhishekdevinfo/complete-intro-to-react-frontend-masters#readme"
+  "homepage": "https://github.com/btholt/complete-intro-to-react#readme"
 }
