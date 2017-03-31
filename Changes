@@ -1,0 +1,39 @@
+1.
+	import { Match } from 'react-router'	
+	
+	import { Route } from 'react-router-dom' 	
+
+2. 		
+	
+	<Match exactly pattern='/' component={Landing} />
+
+	<Route exact path='/' component={Landing} />
+
+3.
+ 
+	import { BrowserRouter } from 'react-router'
+
+	import { BrowserRouter } from 'react-router-dom'
+
+4. 
+
+	import { Link } from 'react-router'
+
+	import { Link } from 'react-router-dom'	
+
+5.
+
+	this.context.router.transitionTo('/search')
+
+	this.context.router.history.push('/search')
+
+6.
+
+      "react-dom": "^15.4.2",
+ -    "react-redux": "^5.0.3",
+ -    "react-router": "^4.0.0",
+ -    "react-router-dom": "v4.0.0",
+ -    "redux": "^3.6.0",
+
+      "webpack": "^2.3.1",
+ -    "webpack-dev-server": "^2.4.2"
