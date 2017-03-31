@@ -8,7 +8,7 @@ const Search = React.createClass({
   propTypes: {
     shows: arrayOf(shape({
       title: string,
-      descriptions: string
+      description: string
     })),
     searchTerm: string
   },
@@ -18,11 +18,7 @@ const Search = React.createClass({
         <Header showSearch />
         <div>
           {this.props.shows
-            .filter((show) => {
-              return `${show.title} ${show.description}`
-              .toUpperCase().indexOf(this.props.searchTerm
-              .toUpperCase()) >= 0
-            })
+            .filter((show) => `${show.title} ${show.description}`.toUpperCase().indexOf(this.props.searchTerm.toUpperCase()) >= 0)
             .map((show) => {
               return (
                 <ShowCard key={show.imdbID} {...show} />

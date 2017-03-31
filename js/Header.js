@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { setSearchTerm } from './actionCreators'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router'
 
 class Header extends React.Component {
   constructor (props) {
@@ -15,11 +15,7 @@ class Header extends React.Component {
   render () {
     let utilSpace
     if (this.props.showSearch) {
-      utilSpace = <input
-        onChange={this.handleSearchTermChange}
-        value={this.props.searchTerm}
-        type='text'
-        placeholder='Search' />
+      utilSpace = <input onChange={this.handleSearchTermChange} value={this.props.searchTerm} type='text' placeholder='Search' />
     } else {
       utilSpace = (
         <h2>
@@ -33,7 +29,7 @@ class Header extends React.Component {
       <header>
         <h1>
           <Link to='/'>
-          The Crazy Videos
+            svideo
           </Link>
         </h1>
         {utilSpace}

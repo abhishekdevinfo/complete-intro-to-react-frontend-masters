@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route } from 'react-router-dom'
+import { Match } from 'react-router'
 import { Provider } from 'react-redux'
 import store from './store'
 import Landing from './Landing'
@@ -11,15 +11,15 @@ const App = () => {
   return (
     <Provider store={store}>
       <div className='app'>
-        <Route exact path='/' component={Landing} />
-        <Route
-          path='/search'
+        <Match exactly pattern='/' component={Landing} />
+        <Match
+          pattern='/search'
           component={(props) => <Search shows={preload.shows} {...props} />}
         />
-        <Route
-          path='/details/:id'
+        <Match
+          pattern='/details/:id'
           component={(props) => {
-            const shows = preload.shows.filter((show) => props.match.params.id === show.imdbID)
+            const shows = preload.shows.filter((show) => props.params.id === show.imdbID)
             return <Details show={shows[0]} {...props} />
           }}
         />

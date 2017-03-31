@@ -5,7 +5,6 @@ const React = require('react')
 const ReactDOMServer = require('react-dom/server')
 const ReactRouter = require('react-router')
 const ServerRouter = ReactRouter.ServerRouter
-console.log(ReactRouter)
 const _ = require('lodash')
 const fs = require('fs')
 const PORT = 5050
